@@ -1,5 +1,8 @@
 {
   "name": "cmsmobile",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
   "type": "angular"
 }

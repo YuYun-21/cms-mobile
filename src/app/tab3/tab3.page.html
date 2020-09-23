@@ -1,17 +1,56 @@
-<ion-header [translucent]="true">
+<ion-header >
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      首页
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  <ion-slides pager="true" *ngIf="this.isregistuser" [options]="slideOpts"#topSlide (click)="onClickSlides()">
+    <ion-slide *ngFor="let c of cl">
+      <!--<h2>{{c.title}}</h2>-->
+      <img src="{{hosturl}}{{c.picurl}}" style="height: 220px"/>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    </ion-slide>
+
+    <!--调用OSS图片-->
+
+    <!--<ion-slide >-->
+    <!--&lt;!&ndash;<h2>{{c.title}}</h2>&ndash;&gt;-->
+    <!--<img src="https://cmsdemo.oss-cn-chengdu.aliyuncs.com/carouselpic/sp200.png" style="height: 180px"/>-->
+
+    <!--</ion-slide>-->
+  </ion-slides>
+
+  <ion-card *ngIf="this.isregistuser">
+    <ion-card-content>
+  <ion-row >
+    <ion-col>
+  <ion-button routerLink="/regist" expand="block" *ngIf="!this.isregistuser">注册</ion-button>
+  <ion-button routerLink="/regist" expand="block" *ngIf="this.isregistuser">编辑个人资料</ion-button>
+    </ion-col>
+    <ion-col>
+  <ion-button routerLink="/p403" expand="block">404</ion-button>
+    </ion-col>
+  </ion-row>
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-button routerLink="/myfridend" expand="block" color="secondary">朋友圈</ion-button>
+    </ion-card-content>
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col>
+  <ion-button routerLink="/vediolist" expand="block" color="success">视频列表</ion-button>
+        </ion-col>
+        <ion-col>
+  <ion-button routerLink="/audiolist" expand="block" color="success">音乐列表</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
+

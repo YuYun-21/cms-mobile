@@ -1,17 +1,22 @@
-<ion-header [translucent]="true">
+<ion-header >
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      新闻
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  <ion-card>
+  <ion-list>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-item *ngFor="let n of newslist" (click)="goTonewsDetail(n.newsid)">
+      <ion-label text-wrap>{{n.title}}</ion-label>
+
+      <ion-text>{{n.pbdate |date:'yyyy-MM-dd'}}</ion-text>
+    </ion-item>
+
+
+  </ion-list>
+  </ion-card>
 </ion-content>
