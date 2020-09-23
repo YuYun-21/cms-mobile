@@ -1,0 +1,92 @@
+
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>朋友圈</ion-title>
+    <ion-button size="small" slot="end" (click)="goToEditPage()">发布</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-avatar>
+          <ion-img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1629668646,2513692460&fm=26&gp=0.jpg">
+
+          </ion-img>
+        </ion-avatar>
+
+      </ion-col >
+      <ion-col size="8">
+        <ion-row>
+          <ion-col>姓名</ion-col>
+          <ion-col>何云辉</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>身高</ion-col>
+          <ion-col>1.60</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>体重</ion-col>
+          <ion-col>55</ion-col>
+        </ion-row>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-card>
+  <ion-card>
+  <ion-list>
+
+    <!--<ion-item *ngFor="let f of fl">-->
+    <!--<ion-grid>-->
+    <!--<ion-row>-->
+    <!--<ion-col><img src="/assets/images/1.jpg" /></ion-col>-->
+    <!--<ion-col>{{f.content}}</ion-col>-->
+    <!--</ion-row>-->
+    <!--</ion-grid>-->
+    <!--</ion-item>-->
+
+
+    <ion-item-sliding *ngFor="let f of fl">
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col><img src="{{f.pic}}" /></ion-col>
+            <ion-col>
+
+              <ion-row>
+                <ion-col>{{f.content}}</ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col>{{f.pbtime | date:'yyyy-MM-dd HH:mm'}}</ion-col>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
+
+
+        </ion-grid>
+      </ion-item>
+
+      <ion-item-options side="end">
+
+        <ion-item-option color="tertiary" expandable (click)="toUpdate(f.myfriendid)">
+          修改
+        </ion-item-option>
+
+        <ion-item-option color="danger" expandable (click)="deleteMyfriends(f.myfriendid)">
+          删除
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+  </ion-card>
+</ion-content>

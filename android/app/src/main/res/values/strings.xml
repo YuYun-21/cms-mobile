@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">醉美乡情</string>
+    <string name="title_activity_main">醉美乡情</string>
+    <string name="package_name">com.heyunhui.cms</string>
+    <string name="custom_url_scheme">com.heyunhui.cms</string>
+</resources>

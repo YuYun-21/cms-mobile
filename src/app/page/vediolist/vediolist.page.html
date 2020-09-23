@@ -1,0 +1,26 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>
+      视频
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+<ion-card>
+  <div  style=""><img src="http://cms.heyunhui.top/assets/images/webp1.webp"/></div>
+
+    <ion-list *ngFor="let m of ml"  (click)="goTomediaDetail(m.mediaid)" lines="none">
+      <ion-card>
+        <ion-item color="secondary">
+
+          <ion-label>{{m.title}}</ion-label>
+
+          <ion-icon name="caret-forward-circle-outline"></ion-icon>
+        </ion-item>
+      </ion-card>
+    </ion-list>
+
+
+
+</ion-card>
+</ion-content>

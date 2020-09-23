@@ -1,0 +1,17 @@
+<ion-list>
+  <ion-item>
+    <ion-label position="stacked">用户名</ion-label>
+    <ion-input [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">密码</ion-label>
+    <ion-input [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+
+  <ion-button expand="block" (click)="login()">登录</ion-button>
+  <ion-button color="danger" expand="block">重置</ion-button>
+
+
+</ion-list>

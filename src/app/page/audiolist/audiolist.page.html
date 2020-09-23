@@ -1,0 +1,24 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>
+      音乐
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+<ion-card>
+  <div  style=""><img width="100%" src="http://cms.heyunhui.top/assets/images/webp2.webp"/></div>
+
+    <ion-list *ngFor="let m of ml" lines="none">
+      <ion-card>
+        <ion-item color="success">
+
+          <ion-label text-wrap>{{m.title}}</ion-label>
+
+          <ion-icon name="caret-forward-circle-outline"  (click)="goToAudioDetail(m.mediaid)"></ion-icon>
+        </ion-item>
+      </ion-card>
+    </ion-list>
+</ion-card>
+</ion-content>

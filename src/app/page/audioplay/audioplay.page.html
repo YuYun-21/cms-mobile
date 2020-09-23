@@ -1,0 +1,19 @@
+<ion-card>
+    <ion-card >
+        <ion-card-header>
+            {{media.title}}
+        </ion-card-header>
+        <ion-card-content>
+            <img src="/assets/images/fengmian.gif" style="align-content: center"/>
+        </ion-card-content>
+
+<audio  src="{{media.url}}" controls="controls" style="width: 100%" autoplay>
+</audio>
+    </ion-card>
+    <ion-card>
+        <ion-item-divider >当前音乐地址:</ion-item-divider>
+        <ion-item-sliding >
+            <ion-label text-wrap color="secondary">{{media.url}}</ion-label>
+        </ion-item-sliding>
+    </ion-card>
+</ion-card>

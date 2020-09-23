@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+
+    <ion-title>{{news.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-badge>{{news.author}}</ion-badge>
+
+
+
+  <div [innerHTML]="news.content | html"></div>
+
+
+</ion-content>
